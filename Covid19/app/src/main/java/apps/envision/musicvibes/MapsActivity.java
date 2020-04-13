@@ -13,7 +13,7 @@ import fcm.GeofenceBroadcastReceiver;
 
 import apps.envision.musicvibes.R;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 
 import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
@@ -72,11 +72,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
 
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
+//
+//    @Override
+//    protected void attachBaseContext(Context newBase) {
+//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+//    }
     private GoogleMap mMap;
 
 

@@ -15,8 +15,8 @@ import com.android.volley.toolbox.Volley;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
-import apps.envision.musicvibes.R;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+//import apps.envision.musicvibes.R;
+//import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 
 /**
@@ -45,11 +45,11 @@ public class MyApplication extends MultiDexApplication {
         instantiateVolleyQueue();
 
 
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/Exo2Regular.otf")
-                .setFontAttrId(R.attr.fontPath)
-                .build()
-        );
+//        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+//                .setDefaultFontPath("fonts/Exo2Regular.otf")
+//                .setFontAttrId(R.attr.fontPath)
+//                .build()
+//        );
 
 
     }
