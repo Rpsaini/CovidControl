@@ -1,0 +1,121 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="textsize10" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/text_grey_color</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="textsize11" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">11dp</item>
+    </style>
+    <style name="textsize12" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="textsize13" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="textsize14" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="textsize15" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="textsize16" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textColorHint">@color/text_grey_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+
+
+    </style>
+
+    <style name="textsize17" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+    <style name="textsize18" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="textsize19" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">19dp</item>
+    </style>
+    <style name="textsize20" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+    <style name="textsize20black" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+
+    <style name="textsize22" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textSize">21dp</item>
+    </style>
+
+    <style name="textsize20whitetext" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="textsize18blue" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/header_color</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+
+    <style name="textsize24" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+
+
+
+    <style name="textsize14small" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="textdatepicker" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColorPrimary">@color/white_color</item>
+    </style>
+
+
+
+</resources>
+
+<!--<resources>-->
+
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--    </style>-->
+
+<!--</resources>-->

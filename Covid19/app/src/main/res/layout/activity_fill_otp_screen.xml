@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    >
+
+    <ScrollView
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="41dp"
+                android:layout_height="57dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/ic_launcher"></ImageView>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/phonenumebertext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15dp"></TextView>
+
+
+
+
+            <TextView
+
+                android:id="@+id/timeleft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Verify OTP"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/white_color"
+                android:textSize="17dp"></TextView>
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Enter OTP which is received on your mobile number"
+                android:textColor="@color/white_color"
+                android:textSize="12dp"></TextView>
+
+
+<!--            <EditText-->
+<!--                android:longClickable="false"-->
+<!--                style="@style/textsize16"-->
+<!--                android:id="@+id/inputcode"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:background="@drawable/edittext_drawble"-->
+<!--                android:gravity="left|center"-->
+<!--                android:hint="Enter Otp"-->
+<!--                android:inputType="number"-->
+<!--                android:maxLength="6"-->
+<!--                android:singleLine="true"-->
+<!--                android:textColor="@color/white_color"-->
+<!--                ></EditText>-->
+
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                >
+
+
+                <EditText
+
+                    android:id="@+id/inputcode"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Enter Otp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="10dp"
+
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    android:textStyle="bold"></EditText>
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:src="@drawable/photoid"
+                    ></ImageView>
+
+                <View
+                    android:id="@+id/viewfullwidth"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:id="@+id/viewhalfwidth"
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/registeragain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text=""
+
+                android:textSize="16dp"></TextView>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/liearforgetpass"
+                android:layout_above="@+id/done"
+                android:background="#fff"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/changemobilenumber"
+                    android:layout_width="0dp"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:textColor="@color/white_color"
+                    android:layout_height="match_parent"
+                    android:text="CHANGE NUMBER"
+                    ></TextView>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:visibility="gone"
+                android:padding="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="25dp"
+                android:id="@+id/resendotp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:textColor="@color/white_color"
+                android:layout_height="match_parent"
+                android:text="Resend OTP"
+                ></TextView>
+
+
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/needsupport"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="14dp"-->
+<!--                    android:background="@drawable/bg_white"-->
+<!--                    android:gravity="center|top"-->
+<!--                    android:paddingRight="30dp"-->
+<!--                    android:text="Need Support"-->
+<!--                    android:textColor="@color/colorSemiblack"-->
+<!--                    android:textSize="18dp"-->
+<!--                    android:visibility="gone"></TextView>-->
+
+<!--                &lt;!&ndash;<ImageView&ndash;&gt;-->
+<!--                &lt;!&ndash;android:padding="2dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;android:tint="@color/colorHint"&ndash;&gt;-->
+<!--                &lt;!&ndash;android:src="@mipmap/support"&ndash;&gt;-->
+<!--                &lt;!&ndash;android:layout_height="40dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;android:layout_width="20dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;android:layout_alignRight="@+id/needsupport"&ndash;&gt;-->
+<!--                &lt;!&ndash;&gt;</ImageView>&ndash;&gt;-->
+
+
+<!--            </RelativeLayout>-->
+
+
+
+            <TextView
+
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/done"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white_color"
+                android:background="@drawable/round_button_drawable"
+                android:gravity="center"
+                android:text="Verify"
+                ></TextView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

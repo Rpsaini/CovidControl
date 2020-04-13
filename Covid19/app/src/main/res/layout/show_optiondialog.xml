@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:id="@+id/rr_outer_activepopup"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/white_color"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_activecases"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Active Cases"
+            android:gravity="center|left"
+            style="@style/textsize18"
+            ></TextView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_reportQuarantine"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Report a case"
+            android:gravity="center|left"
+            style="@style/textsize18"
+            ></TextView>
+
+        <TextView
+
+            android:id="@+id/tv_applyforpass"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Apply for e-Pass"
+            android:gravity="center|left"
+            style="@style/textsize18"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Refresh"
+            android:gravity="center|left"
+            style="@style/textsize18"
+            ></TextView>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

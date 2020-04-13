@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000102</color>
+    <color name="colorPrimaryDark">#000102</color>
+    <color name="colorAccent">#000102</color>
+    <color name="black_color">#000102</color>
+
+    <color name="header_color">#000000</color>
+    <color name="statusbar_color">#000000</color>
+
+
+    <color name="currency_color">#293890</color>
+    <color name="button_grey_color">#BFBFBF</color>
+    <color name="text_grey_color">#B6B6B6</color>
+    <color name="background_grey_color">#D6D6D6</color>
+    <color name="navigation_color">#F5F5F5</color>
+
+    <color name="currency_down_color">#C3861F</color>
+    <color name="currency_up_color">#0BA29A</color>
+    <color name="button_ferozi_color">#00A59F</color>
+    <color name="button_blue_color">#003897</color>
+
+    <color name="white_color">#ffffff</color>
+
+    <color name="red_color">#FF0000</color>
+
+    <color name="green_color">#0A5D00</color>
+
+    <color name="translucent_black">#80000000</color>
+    <color name="edittextcolor">#252525</color>
+    <color name="buttonborder">#007BFF</color>
+    <color name="hinttextcolor">#BBBBBB</color>
+
+
+
+
+
+
+
+
+
+
+</resources>

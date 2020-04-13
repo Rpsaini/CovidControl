@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <item>
+        <shape>
+            <solid android:color="@color/edittextcolor"></solid>
+            <stroke
+                android:width="2dp"
+                android:color="@color/edittextcolor" />
+            <corners
+                android:topLeftRadius="0dp"
+                android:topRightRadius="70dp"
+                />
+
+        </shape>
+    </item>
+</selector>

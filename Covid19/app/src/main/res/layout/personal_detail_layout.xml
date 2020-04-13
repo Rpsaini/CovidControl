@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/creditum_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/login_text"
+                style="@style/textsize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/creditum_icon"
+                android:layout_gravity="bottom"
+                android:inputType="textMultiLine"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Personal detail"
+                android:textColor="@color/white_color"></TextView>
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <EditText
+                    android:textCursorDrawable="@drawable/cursordrawable"
+                    android:id="@+id/name"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Name"
+                    android:maxLength="50"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></EditText>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <EditText
+                    android:textCursorDrawable="@drawable/cursordrawable"
+                    android:id="@+id/mobile"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Mobile"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></EditText>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <EditText
+                    android:textCursorDrawable="@drawable/cursordrawable"
+                    android:id="@+id/age"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Age"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></EditText>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+                <TextView
+                    android:background="@color/button_blue_color"
+                    android:id="@+id/sex"
+                    style="@style/textsize16"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:hint="Male"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></TextView>
+
+
+                <TextView
+                    style="@style/textsize16"
+                    android:id="@+id/female"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:hint="FeMale"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></TextView>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <TextView
+                    android:id="@+id/date"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="date"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></TextView>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <TextView
+                    android:id="@+id/partoforign"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Part of Origin"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></TextView>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:background="@drawable/edittext_drawble"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <TextView
+                    android:id="@+id/partofarrival"
+                    style="@style/textsize16"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="40dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Part of Arrival"
+                    android:maxLength="10"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white_color"
+                    android:textColorHint="@color/hinttextcolor"
+                    ></TextView>
+
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:background="@color/buttonborder"
+                    android:layout_alignParentBottom="true"
+                    ></View>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+

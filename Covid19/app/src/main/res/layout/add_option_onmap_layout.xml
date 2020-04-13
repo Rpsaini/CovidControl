@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/white_drawable_with_upper_round"
+    android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/creditum_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:visibility="gone"
+            android:padding="10dp"
+            android:tint="@color/white_color"
+            android:id="@+id/uparrow"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:src="@drawable/uparrow"
+            ></ImageView>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/activecases"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            >
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                >
+                <ImageView
+                    android:visibility="gone"
+                    android:tint="@color/colorPrimary"
+                    android:layout_height="60dp"
+                    android:layout_width="60dp"
+                    android:src="@drawable/rectangle_corner"
+                    >
+                </ImageView>
+
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:tint="@color/colorPrimary"
+                    android:paddingRight="5dp"
+
+                    android:layout_centerVertical="true"
+                    android:layout_height="25dp"
+                    android:layout_width="25dp"
+                    android:src="@drawable/activecases"
+
+                    >
+                </ImageView>
+            </RelativeLayout>
+
+            <TextView
+                android:paddingBottom="10dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="@string/realtimecounter"
+                android:textColor="@color/colorPrimary"
+                ></TextView>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/uploadyorselfie"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            >
+
+            <RelativeLayout
+
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                >
+                <ImageView
+                   android:visibility="gone"
+                    android:tint="@color/colorPrimary"
+                    android:layout_height="46dp"
+                    android:layout_width="60dp"
+                    android:src="@drawable/rectangle_corner"
+                    >
+                </ImageView>
+
+                <ImageView
+                    android:layout_marginTop="24dp"
+                    android:tint="@color/white_color"
+                    android:paddingRight="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="45dp"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/photoid"
+
+                    >
+                </ImageView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/upload_register"
+
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center|left"
+                android:text="@string/makephotoid"
+                android:textColor="@color/white_color"
+                ></TextView>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            >
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                >
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/rectangle_corner"
+                    >
+                </ImageView>
+
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/kyc_avatr"
+
+                    >
+                </ImageView>
+            </RelativeLayout>
+
+            <TextView
+                android:paddingBottom="10dp"
+                android:textSize="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="@string/addquarantine"
+                android:textColor="@color/colorPrimary"
+                ></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,276 @@
+<resources>
+    <array name="genderarray">
+        <item>Female</item>
+        <item>Male</item>
+
+    </array>
+    <string name="app_name">Covid Control</string>
+    <string name="internetconnection">Internet connection not found</string>
+    <string name="ivalidRequest">Invalid request!</string>
+
+    <string name="anauthorizedaccess">Unauthorized access!</string>
+
+    <string name="login">Login</string>
+    <string name="enteremailaddress">Valid email required.</string>
+    <string name="enterpasword">Enter password</string>
+    <string name="enter_confirm_pasword">Enter Confirm password</string>
+    <string name="passwordnotmatched">Confirm password does`t match.</string>
+
+    <string name="createyouraccount">Create your Account</string>
+    <string name="configureappsecurity">Configure app security</string>
+    <string name="donthaveaccount">Don`t have an account?</string>
+
+    <string name="forgotpassword">Forgot password</string>
+
+    <string name="resetyourpassword">Reset your Password</string>
+    <string name="reset">Reset</string>
+
+    <string name="youremail">Your Email</string>
+    <string name="confirmpassword">Confirm password</string>
+    <string name="password">Password</string>
+    <string name="Email">Email</string>
+
+    <string name="save">Save</string>
+    <string name="setpin">Select your four digit pin</string>
+    <string name="confirmpin">Confirm your four digit pin</string>
+
+    <string name="delete">Delete</string>
+    <string name="evc">Enter  Email verification code </string>
+    <string name="confirm">Confirm</string>
+
+    <string name="done">Done</string>
+
+    <string name="setsecurepin">Set security PIN</string>
+    <string name="firstname">First name</string>
+
+
+    <string name="lastname">Last name</string>
+    <string name="enterfirstname">Enter first name</string>
+
+    <string name="enterlastname">Enter last name</string>
+    <string name="home">Home</string>
+    <string name="send">Send</string>
+    <string name="exchange">Exchange</string>
+    <string name="topup">Top Up</string>
+
+    <string name="dashboard">DashBoard</string>
+
+    <string name="verify">Verify</string>
+    <string name="verify_pin">Type PIN to unlock</string>
+
+    <string name="tellus">Please tell us about yourself</string>
+
+    <string name="selectdob">Select Date Of Birth</string>
+
+    <string name="country">Country</string>
+    <string name="transactionpass">Transaction Password</string>
+    <string name="mobile">Mobile Number</string>
+
+
+    <string name="myprofile">My Profile</string>
+    <string name="sendtoafrien">Send to my friend</string>
+    <string name="banktransfer">Bank Transfer</string>
+
+    <string name="sendtomybank">Send to my bank</string>
+
+
+    <string name="sendfund">Send Fund</string>
+    <string name="fromcrypto">From Crypto</string>
+
+
+    <string name="fromcard">From Card</string>
+
+    <string name="chatwithus">Chat with us</string>
+
+    <string name="card">Card</string>
+    <string name="activity">Activity</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="invest">Invest</string>
+    <string name="profile">Profile</string>
+    <string name="recurringtransfer">Recurring Transfer</string>
+
+
+    <string name="referral">Referral</string>
+    <string name="to">To</string>
+
+    <string name="from">From</string>
+
+    <string name="youwillrecieve">You Receive</string>
+
+    <string name="rateis">Rate Is</string>
+    <string name="enterrateis"> Enter Rate </string>
+
+    <string name="exchangeamount">Exchange Amount</string>
+
+    <string name="enter_confirm_pin">Confirm Pin</string>
+    <string name="entertransactionpass">Enter Transaction Password</string>
+
+
+    <string name="entermobile">Enter Mobile number</string>
+
+
+    <string name="postalcode">Postal Code</string>
+    <string name="enterpostalcode">Enter Postal code</string>
+
+    <string name="city">City</string>
+    <string name="entercity">Enter City</string>
+
+
+    <string name="state">State</string>
+    <string name="enterstate">Enter State</string>
+
+    <string name="ddresslinethree">Enter address line 3</string>
+    <string name="enteraddressthree">Address line three</string>
+
+    <string name="addresslinetwo">Address line 2</string>
+    <string name="enteraddresslinetwo">Enter Address line 2</string>
+    <string name="address">Address</string>
+
+    <string name="addresslineone">Address Line 1</string>
+    <string name="enteraddresslineone">Enter Address line 1</string>
+
+    <string name="continues">Continue</string>
+
+    <string name="wheretodeliveryourcard">Where to deliver your card</string>
+
+    <string name="cardactivity">Card Activity</string>
+    <string name="walletactivity">Wallet ctivity</string>
+
+    <string name="mywallet">My Wallets</string>
+
+    <string name="startdate">Start Date</string>
+    <string name="enddate">End Date</string>
+
+    <string name="select_startdate">Select start date</string>
+    <string name="select_enddate">Select end date</string>
+
+
+    <string name="search">Search</string>
+    <string name="zipcode">Zip Code</string>
+
+    <string name="selectaccount">Select Account</string>
+
+    <string name="changeset">Change/Set</string>
+
+    <string name="amounttotopup">Amount to topup</string>
+
+    <string name="selectacounttosendfrom">Select account to send from</string>
+
+    <string name="sendPaymentto">Send payment to</string>
+
+    <string name="accounttosend">Amount to send</string>
+
+    <string name="recipientemail">Recipient Email</string>
+
+    <string name="selectcurrency">Select Currency</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="transfer">Transfer</string>
+
+    <string name="sendaccountnumber">Account number or IBAN</string>
+
+    <string name="sortcodeor_swift_code">Sort code or Swift</string>
+
+    <string name="name">Name</string>
+    <string name="sendtomybanks">Send to my Bank</string>
+
+    <string name="manageaccount">Manage Account</string>
+    <string name="personalinfo">Personal info and Security</string>
+
+
+    <string name="messages">Messages</string>
+
+    <string name="bank">Bank</string>
+    <string name="kyc">KYC</string>
+    <string name="logout">Logout</string>
+
+
+    <string name="personalinfos">Personal Info</string>
+
+    <string name="birthdate">Birth Date</string>
+
+
+    <string name="addressdetail">Address Details</string>
+
+    <string name="verified">Verified</string>
+    <string name="identityproff">Identity proff</string>
+    <string name="proffofaddress">Proff of address</string>
+    <string name="countryprfi">Country prefix</string>
+
+    <string name="chooseimage">Choose Image</string>
+    <string name="chooseimageeither">Choose file either from camera or Gallery</string>
+
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="logoutmsg">Are you sure you want to logout?</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
+
+    <string name="loginusingbiometric">Log in using your biometric credential</string>
+
+
+    <string name="sucesss">Registration Done Successfully !</string>
+
+    <string name="gotologin">Goto Login</string>
+
+    <string name="resendctivationlink">Resend Activation link</string>
+
+    <string name="enterverificationcode">Enter verification code</string>
+
+    <string name="enter_account_hol_name">Enter Account holder name</string>
+    <string name="enter_swiftcode">Enter Swift code</string>
+    <string name="enter_account_number">Enter Account number</string>
+    <string name="enteramount">Enter Amounts</string>
+
+    <string name="select_currency">Select Currency</string>
+    <string name="go_to">Go To</string>
+
+    <string name="topupfromcard">Top up from card</string>
+    <string name="topupfromcrypto">Top up from crypto</string>
+    <string name="topup_from_rate">Enter rate</string>
+
+    <string name="touchthefingerprintsenssor">Touch the finger print sensor</string>
+    <string name="terms">Terms and conditions</string>
+    <string name="privacy">Privacy policy</string>
+    <string name="copyright">2020 all rights reserved Creditum</string>
+    <string name="helloRoger">Hello,Roger</string>
+    <string name="cannotcreateaccount">Can`t Create account? SignUp</string>
+    <string name="alreadyhaveaccount">Already have account? Login</string>
+    <string name="signup">SignUp</string>
+    <string name="createAccount">Create Account</string>
+    <string name="letsstart">Lets start with getting to know about you.</string>
+    <string name="loginwithtouchid">Login with Tsouch ID</string>
+    <string name="lifyfinger">Please lift and rest your finger</string>
+    <string name="makephotoid">Upload your Selfie </string>
+    <string name="makeaselfie">Make a Selfie</string>
+    <string name="addquarantine">Report A Quarantine</string>
+    <string name="realtimecounter">Active Cases</string>
+    <string name="quarantin_exit">Dear User, You are not allowed to leave the quarantined area marked by officials. Please go under the marked area!!!</string>
+    <string name="normalenter">Dear User, You are entered in quarantined area. There must be some covid19 suspected person around your 50 meter area. Please be carefull!!!</string>
+
+
+    <string name="smscontent">We will send you an SMS message with a code
+to verify your mobile number</string>
+
+    <string name="ayca">Please add your current address for billing</string>
+    <string name="kycmsg">Please add the photos of your ID and your selfie to
+make sure that you are the right person.</string>
+
+
+    <string name="termsandcondition">
+    I hereby declare that the above information is true to the best of my knowledge.
+    I have read the provisions of Section 144 of Criminal Procedure Code and will be liable for criminal action for incorrect facts.
+    I will produce/prove the relevant documents/ emergency if desired by the concerned authorities
+</string>
+
+
+    <!--    <string-array name="array_passtype">-->
+    <!--        <item>Select Pass Type</item>-->
+    <!--        <item>Local</item>-->
+    <!--        <item>Within District</item>-->
+    <!--        <item>Inter District</item>-->
+    <!--        <item>Inter State</item>-->
+    <!--    </string-array>-->
+
+
+</resources>

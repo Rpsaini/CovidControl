@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "760738959836",
+    "firebase_url": "https://cvdwithmusic.firebaseio.com",
+    "project_id": "cvdwithmusic",
+    "storage_bucket": "cvdwithmusic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760738959836:android:c3b85a7f5b5612d5237f19",
+        "android_client_info": {
+          "package_name": "apps.envision.musicvibes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760738959836-6381a9c0sl11hd0pkq7um9c9r1dk5di1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apps.envision.musicvibes",
+            "certificate_hash": "19fce860b201ca0c155599993f3341d806dae64c"
+          }
+        },
+        {
+          "client_id": "760738959836-f7fmvobrumn73h3h57i72svgbtqu0uoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABGrHXHn27cJ9DsqSTwEbU53lOxGKuahU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760738959836-f7fmvobrumn73h3h57i72svgbtqu0uoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

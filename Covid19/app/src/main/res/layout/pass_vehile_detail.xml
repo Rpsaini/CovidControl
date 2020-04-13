@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill E-pass detail"
+            style="@style/textsize16"
+            android:textColor="@color/white_color"
+            ></TextView>
+
+
+        <RelativeLayout
+            android:background="@drawable/edittext_drawble"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <Spinner
+
+                android:popupBackground="@color/edittextcolor"
+                android:id="@+id/spinner_vehicletype"
+                style="@style/textsize16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+
+                android:paddingLeft="5dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/hinttextcolor"
+                ></Spinner>
+
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:background="@color/buttonborder"
+                android:layout_alignParentBottom="true"
+                ></View>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/uparrow"
+                android:layout_alignParentEnd="true"
+                android:tint="@color/white_color"
+                android:padding="5dp"
+                android:rotation="180"
+                ></ImageView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:background="@drawable/edittext_drawble"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <EditText
+                android:textCursorDrawable="@drawable/cursordrawable"
+                android:id="@+id/pass_vehiclenumer"
+                style="@style/textsize16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                 android:hint="Vehicle number"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/hinttextcolor"
+                ></EditText>
+
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:background="@color/buttonborder"
+                android:layout_alignParentBottom="true"
+                ></View>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:background="@drawable/edittext_drawble"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <TextView
+                android:id="@+id/pass_date"
+                style="@style/textsize16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                android:hint="Date"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/hinttextcolor"
+                ></TextView>
+
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:background="@color/buttonborder"
+                android:layout_alignParentBottom="true"
+                ></View>
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:background="@drawable/edittext_drawble"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            >
+            <EditText
+                android:textCursorDrawable="@drawable/cursordrawable"
+                android:id="@+id/pass_reason"
+                style="@style/textsize16"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:background="@android:color/transparent"
+                android:gravity="top|left"
+                android:padding="5dp"
+                android:hint="Reason for going out"
+                android:maxLines="5"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/hinttextcolor"
+                ></EditText>
+
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:background="@color/buttonborder"
+                android:layout_alignParentBottom="true"
+                ></View>
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <CheckBox
+                android:id="@+id/checkbox_terms"
+                android:layout_gravity="center"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:buttonTint="@color/white_color"
+                ></CheckBox>
+
+            <TextView
+
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/termsandcondition"
+                style="@style/textsize14"
+                android:inputType="textMultiLine"
+                android:textColor="@color/white_color"
+                ></TextView>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/apply"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button_drawable"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="55dp"
+            android:text="Apply"
+            android:inputType="textMultiLine"
+            android:gravity="center"
+            android:textColor="@color/white_color"
+            style="@style/textsize22"
+            ></TextView>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
