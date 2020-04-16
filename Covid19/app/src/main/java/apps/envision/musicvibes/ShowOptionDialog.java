@@ -16,7 +16,7 @@ public class ShowOptionDialog
 {
 
     private Dialog appUpdatedDialog;
-    public ShowOptionDialog(final MapsActivity appCompatActivity)
+    public ShowOptionDialog(final MapsActivity appCompatActivity,String mobile,String isQuarantine)
     {
 
         final SaveImpPrefrences imp=new SaveImpPrefrences();
@@ -70,7 +70,29 @@ public class ShowOptionDialog
 
 
         TextView tv_applyforpass =appUpdatedDialog.findViewById(R.id.tv_applyforpass);
+        TextView tv_uploadselfie =appUpdatedDialog.findViewById(R.id.tv_uploadselfie);
 
+
+        if(isQuarantine.equalsIgnoreCase("1"))
+        {
+            tv_uploadselfie.setVisibility(View.VISIBLE);
+            tv_applyforpass.setVisibility(View.GONE);
+
+            tv_uploadselfie.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i=new Intent(appCompatActivity, UloadSelfieActivity.class);
+                    i.putExtra("mobile", imp.reterivePrefrence(appCompatActivity, "Nu_mobile") + "");
+                    appCompatActivity.startActivity(i);
+                }
+            });
+        }
+
+        else
+        {
+            tv_uploadselfie.setVisibility(View.GONE);
+            tv_applyforpass.setVisibility(View.VISIBLE);
+        }
         if(imp.reterivePrefrence(appCompatActivity,CConstant.key_PassStatus).equals("0"))
         {
             tv_applyforpass.setText("Apply for e-Pass");
@@ -86,20 +108,12 @@ public class ShowOptionDialog
             public void onClick(View v)
               {
                 appUpdatedDialog.dismiss();
-
-                String isNormalUser=imp.reterivePrefrence(appCompatActivity,"isNormalUser").toString();
                 String passStatus=imp.reterivePrefrence(appCompatActivity,CConstant.key_PassStatus).toString();
-                if(passStatus.equalsIgnoreCase("0")) {
-                     if (isNormalUser.equalsIgnoreCase("0")) {
-                         Intent i = new Intent(appCompatActivity, MobileNumberActivity.class);
-                         i.putExtra("epass", "1");
-                         appCompatActivity.startActivity(i);
-
-                     } else {
-                         Intent i = new Intent(appCompatActivity, ApplyForPass.class);
-                         i.putExtra("mobile", imp.reterivePrefrence(appCompatActivity, "Nu_mobile") + "");
-                         appCompatActivity.startActivity(i);
-                     }
+                if(passStatus.equalsIgnoreCase("0"))
+                {
+                    Intent i = new Intent(appCompatActivity, ApplyForPass.class);
+                    i.putExtra("mobile", imp.reterivePrefrence(appCompatActivity, "Nu_mobile") + "");
+                    appCompatActivity.startActivity(i);
                  }
                  else
                  {

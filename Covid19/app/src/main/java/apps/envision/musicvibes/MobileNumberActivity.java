@@ -81,7 +81,7 @@ public class MobileNumberActivity extends AppCompatActivity {
 
                 final Map<String,String> m=new HashMap<>();
                 m.put("mobile",mobil_number.getText().toString());
-                m.put("epass",getIntent().getStringExtra("epass"));
+
 
                 new ServerHandler().sendToServer(MobileNumberActivity.this, "login", m, 0, new CallBack() {
                     @Override
@@ -99,9 +99,8 @@ public class MobileNumberActivity extends AppCompatActivity {
                                 Intent i=new Intent(MobileNumberActivity.this, VerifyOtpActivity.class);
                                 i.putExtra("mobile",mobil_number.getText().toString());
                                 i.putExtra("otp",obj.getString("otp"));
-                                i.putExtra("epass",getIntent().getStringExtra("epass"));
                                 startActivity(i);
-                                finish();
+
 
                             }
                             else

@@ -57,18 +57,28 @@ public class SplashScreen extends AppCompatActivity {
         runnable = new Runnable() {
             @Override
             public void run() {
-
-                System.out.println("iisde iitiate=="+FusedLocationNew.mCurrentLocation);
-
                 if(FusedLocationNew.mCurrentLocation == null) {
                     hnd.postDelayed(this, 1000);
 
                 }
                 else {
-                    if(x==0) {
+                    if(x==0)
+                    {
                         x=1;
-                        Intent i = new Intent(SplashScreen.this, MapsActivity.class);
-                        startActivity(i);
+
+                        SaveImpPrefrences imp=new SaveImpPrefrences();
+                        if(imp.reterivePrefrence(SplashScreen.this,"isQuarantine").toString().equalsIgnoreCase("0"))
+                        {
+                            Intent i = new Intent(SplashScreen.this, MobileNumberActivity.class);
+                            startActivity(i);
+
+                        }
+                        else
+                        {
+                            Intent i = new Intent(SplashScreen.this, MapsActivity.class);
+                            startActivity(i);
+
+                        }
                         finish();
 
                     }

@@ -109,6 +109,7 @@
 
 
                 <EditText
+
                     android:textCursorDrawable="@drawable/cursordrawable"
                     android:id="@+id/inputcode"
                     style="@style/textsize16"

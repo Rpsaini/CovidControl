@@ -2,5 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <paths>
         <external-path name="my_images" fullpath="storage/emulated/0/Pictures/" />
+
     </paths>
 </PreferenceScreen>

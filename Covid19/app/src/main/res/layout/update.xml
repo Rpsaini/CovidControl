@@ -86,7 +86,7 @@
 
     <TextView
 
-        android:text="New App version is available on Play Store."
+        android:text="New App version is ready for download."
         android:layout_marginTop="3dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -125,7 +125,7 @@
         android:id="@+id/updatenow"
         android:gravity="center"
         android:textColor="@color/white_color"
-        android:text="Update"
+        android:text="Download"
         android:background="@drawable/round_button_drawable"
         android:layout_marginTop="10dp"
         android:layout_width="150dp"

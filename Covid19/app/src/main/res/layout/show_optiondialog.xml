@@ -36,8 +36,20 @@
             style="@style/textsize18"
             ></TextView>
 
-        <TextView
 
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_uploadselfie"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Upload Selfie"
+            android:gravity="center|left"
+            style="@style/textsize18"
+            ></TextView>
+
+        <TextView
+            android:visibility="gone"
             android:id="@+id/tv_applyforpass"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"

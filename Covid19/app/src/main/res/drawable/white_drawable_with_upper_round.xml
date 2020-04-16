@@ -10,7 +10,7 @@
                 android:color="@color/edittextcolor" />
             <corners
                 android:topLeftRadius="0dp"
-                android:topRightRadius="70dp"
+                android:topRightRadius="0dp"
                 />
 
         </shape>

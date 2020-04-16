@@ -7,8 +7,8 @@ android {
         applicationId "apps.envision.musicvibes"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 5
-        versionName "5.0"
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes

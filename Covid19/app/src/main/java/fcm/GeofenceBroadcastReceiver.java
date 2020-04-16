@@ -57,18 +57,14 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
     }
 
     private void enterOrExitQuarantine(final Context ct, String requestid, String type) {
-        String mobile = "0";
-        String userdata = new SaveImpPrefrences().reterivePrefrence(ct, "user_data").toString();
-        System.out.println("user data===" + userdata);
-        if (userdata.equalsIgnoreCase("0")) {
+
+        String mobile = new SaveImpPrefrences().reterivePrefrence(ct, "Nu_mobile").toString();
+        String isQuarantine = new SaveImpPrefrences().reterivePrefrence(ct, "isQuarantine").toString();
+
+        System.out.println("isquarntine===="+isQuarantine+"===="+mobile+"=="+requestid);
+        if(isQuarantine.equalsIgnoreCase("2"))
+        {
             mobile = "0";
-        } else {
-            try {
-                JSONObject obj = new JSONObject(userdata);
-                mobile = obj.getString("mobile");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
 
         playSond(ct, requestid, mobile, type);
@@ -114,7 +110,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
         String isQuarantine = new SaveImpPrefrences().reterivePrefrence(ct, "isQuarantine").toString();
         if (type.equalsIgnoreCase("enter"))
         {
-            if(isQuarantine.equalsIgnoreCase("yes"))
+            if(isQuarantine.equalsIgnoreCase("1"))
             {
                 if (quarantineId.equalsIgnoreCase(mobile)) //quarantine user
                 {
@@ -124,7 +120,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
                 }
 
             }
-            else // normal user
+            else // normal user 2
                 {
                 Intent intent = new Intent(ct, SplashScreen.class);
                 intent.putExtra("isaction", "no");
@@ -136,7 +132,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
         } else //exit fro quarantine
         {
 
-            if (isQuarantine.equalsIgnoreCase("yes"))
+            if (isQuarantine.equalsIgnoreCase("1"))
             {
                 if (quarantineId.equalsIgnoreCase(mobile)) //Quarantine user
                 {

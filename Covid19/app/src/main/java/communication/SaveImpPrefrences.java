@@ -77,6 +77,16 @@ public class SaveImpPrefrences
             } catch (Exception e) {
                 Toast.makeText(ct, e.getMessage() + " ", Toast.LENGTH_LONG).show();
             }
+        }
+          else if (sharekey.equals(CConstant.key_downloadid)) {
+                try {
+                    editor.putString(CConstant.key_downloadid, data + "");
+                } catch (Exception e) {
+                    Toast.makeText(ct, e.getMessage() + " ", Toast.LENGTH_LONG).show();
+                }
+
+
+
 
         }
 
@@ -137,6 +147,13 @@ public class SaveImpPrefrences
                 if(prefs.contains(CConstant.key_PassStatus))// pass
                 {
                     return prefs.getString(CConstant.key_PassStatus, "");
+                }
+            }
+
+            else if (shareKey.equals(CConstant.key_downloadid)) {
+                if(prefs.contains(CConstant.key_downloadid))// pass
+                {
+                    return prefs.getString(CConstant.key_downloadid, "");
                 }
             }
 

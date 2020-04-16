@@ -65,7 +65,7 @@ public class VerifyOtpActivity extends AppCompatActivity {
                     m.put("otp", inputcode.getText().toString());
                     m.put("lat", FusedLocationNew.mCurrentLocation.getLatitude() + "");
                     m.put("lng", FusedLocationNew.mCurrentLocation.getLongitude() + "");
-                    m.put("epass", getIntent().getStringExtra("epass")+"");
+
 
                     System.out.println("before====" + m);
                     saveUserDetails(m);
@@ -93,28 +93,18 @@ public class VerifyOtpActivity extends AppCompatActivity {
 
                             Toast.makeText(VerifyOtpActivity.this, obj.getString("message"), Toast.LENGTH_LONG).show();
 
-                        } else {
-                            if(getIntent().getStringExtra("epass").equalsIgnoreCase("1"))
+                        } else
                             {
-                                System.out.println("epass detail==="+obj);
-                                new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, "yes", "isNormalUser");
+
+
+                                new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, obj.getString("is_qurantined"), "isQuarantine");
                                 new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, getIntent().getStringExtra("mobile"), "Nu_mobile");
 
-                                Intent i = new Intent(VerifyOtpActivity.this, ApplyForPass.class);
-                                i.putExtra("mobile",getIntent().getStringExtra("mobile"));
+                                Intent i = new Intent(VerifyOtpActivity.this, MapsActivity.class);
                                 startActivity(i);
-                                finish();
+                                finishAffinity ();
 
-                            }
-                            else
-                            {
-                                new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, obj.getJSONObject("data"), "user_data");
-                                new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, "yes", "isQuarantine");
 
-                                Intent i = new Intent(VerifyOtpActivity.this, UloadSelfieActivity.class);
-                                startActivity(i);
-                                finish();
-                            }
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

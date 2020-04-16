@@ -1,6 +1,7 @@
 package apps.envision.musicvibes;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -8,13 +9,15 @@ import androidx.fragment.app.FragmentActivity;
 import communication.CallBack;
 import communication.SaveImpPrefrences;
 import communication.ServerHandler;
+import fcm.BaseActivity;
 import fcm.FusedLocationNew;
 import fcm.GeofenceBroadcastReceiver;
 
 import apps.envision.musicvibes.R;
 
 
-
+import android.app.AlertDialog;
+import android.app.DownloadManager;
 import android.app.PendingIntent;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -25,14 +28,17 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,6 +61,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -62,7 +69,7 @@ import java.util.Map;
 import java.util.Set;
 
 
-public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
     private GeofencingClient geofencingClient;
     List<Geofence> geofenceList=new ArrayList<>();
     public static boolean isSelfieUploaded=false;
@@ -70,21 +77,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final long GEOFENCE_EXPIRATION_TIME =1800000;//mill
     private Map<String,String> blueToothMap=new HashMap<>();
 
+    private String isQuarantine,Nu_mobile;
 
-
-//
-//    @Override
-//    protected void attachBaseContext(Context newBase) {
-//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-//    }
     private GoogleMap mMap;
+    boolean isDownloading;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_maps);
+
          upload_register =findViewById(R.id.upload_register);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -92,18 +97,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         geofencingClient = LocationServices.getGeofencingClient(this);
         checkAndRequestPermissions();
-        init();
-        new ActiveCasesDialog(this);
-       // showStatPopup();
+        isDownloading=isDownloading(MapsActivity.this);
 
+        init();
+        if(!isDownloading) {
+            new ActiveCasesDialog(this);
+            }
+        SaveImpPrefrences imp=new SaveImpPrefrences();
+        isQuarantine= imp.reterivePrefrence(MapsActivity.this,"isQuarantine").toString();// 1 mean yes 2 mean no
+        Nu_mobile = imp.reterivePrefrence(MapsActivity.this,"Nu_mobile").toString();
 
 
     }
 
 
-    private  void init()
+       public  void init()
     {
-        getListOfBluetooth();
+       // getListOfBluetooth();
         final ImageView uparrow =findViewById(R.id.uparrow);
         uparrow.setTag("1");
         final LinearLayout ll_uploadselfiewview =findViewById(R.id.ll_uploadselfiewview);
@@ -135,27 +145,26 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
 
-        findViewById(R.id.uploadyorselfie).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String isQuarantine=new SaveImpPrefrences().reterivePrefrence(MapsActivity.this,"isQuarantine").toString();
-                if(isQuarantine.equalsIgnoreCase("yes"))
-                {
-                    Intent i=new Intent(MapsActivity.this, UloadSelfieActivity.class);
-                    startActivity(i);
-                }
-                else
-                {
-//                    Intent i=new Intent(MapsActivity.this,TakeMobileScreen.class);
-                    Intent i=new Intent(MapsActivity.this, MobileNumberActivity.class);
-                    i.putExtra("epass","0");
-                    startActivity(i);
-                }
-
-
-            }
-        });
+//        findViewById(R.id.uploadyorselfie).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                String isQuarantine=new SaveImpPrefrences().reterivePrefrence(MapsActivity.this,"isQuarantine").toString();
+//                if(isQuarantine.equalsIgnoreCase("yes"))
+//                {
+//                    Intent i=new Intent(MapsActivity.this, UloadSelfieActivity.class);
+//                    startActivity(i);
+//                }
+//                else
+//                {
+////                    Intent i=new Intent(MapsActivity.this,TakeMobileScreen.class);
+//                    Intent i=new Intent(MapsActivity.this, MobileNumberActivity.class);
+//                    startActivity(i);
+//                }
+//
+//
+//            }
+//        });
 
 
         findViewById(R.id.showoption).setOnClickListener(new View.OnClickListener() {
@@ -163,7 +172,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
 
 
-                new ShowOptionDialog(MapsActivity.this);
+                new ShowOptionDialog(MapsActivity.this,Nu_mobile,isQuarantine);
             }
         });
     }
@@ -282,8 +291,17 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
 
                                         }
-                                        if (obj.has("app_version")) {
-                                            new AppUpdateDialog().appupdatedDialog(MapsActivity.this, obj.getString("play_store_url"), obj.getString("app_version"));
+                                        if (obj.has("appversion"))
+                                        {
+                                            if(!isDownloading)
+                                            {
+                                                //Integer.parseInt(obj.getString("appversion")
+                                                if (getVersionCode(MapsActivity.this) < 2)
+                                                {
+                                                   // alertDialogForUpdate();
+                                                }
+                                            }
+
                                         }
 
                                         getGeofencingRequest();
@@ -504,23 +522,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         final Map<String,String> m=new HashMap<>();
         m.put("request_array",array+"");
 
-        new ServerHandler().sendToServer(MapsActivity.this, "register_geofense", m, 0, new CallBack() {
+        new ServerHandler().sendToServer(MapsActivity.this, "register_geofense", m, 1, new CallBack() {
             @Override
             public void getRespone(String dta, ArrayList<Object> respons) {
                 try {
-                    JSONObject obj=new JSONObject(dta);
-//                    if(obj.getString("status").equalsIgnoreCase("true"))
-//                    {
-//
-//                        Toast.makeText(MapsActivity.this,obj.getString("message"),Toast.LENGTH_LONG).show();
-//
-//
-//                    }
-//                    else
-//                    {
-//                        Toast.makeText(MapsActivity.this,obj.getString("message"),Toast.LENGTH_LONG).show();
-//                    }
-
+                   // JSONObject obj=new JSONObject(dta);
                 }
                 catch (Exception e)
                 {
@@ -640,4 +646,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return distance;
         }
     }
+
+
+
+
+
+
 }
