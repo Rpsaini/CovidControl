@@ -120,7 +120,9 @@ public class SplashScreen extends AppCompatActivity {
                             initiate();
                         }
 
-                    } else {
+                    }
+                    else
+                        {
                         counter = 20;
                         if (deviceToken.equalsIgnoreCase("") || deviceToken.equalsIgnoreCase("0")) {
                             imp.savePrefrencesData(SplashScreen.this, generateRandomString(), "device_token_user");

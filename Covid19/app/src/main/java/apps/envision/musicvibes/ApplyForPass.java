@@ -672,7 +672,7 @@ public class ApplyForPass extends AppCompatActivity {
             }
             if (photoFile != null) {
                 photoURI = FileProvider.getUriForFile(this,
-                        "apps.envision.musicvibes.fullsizeimage.fileprovider",
+                        "apps.envision.musicvibes.fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {

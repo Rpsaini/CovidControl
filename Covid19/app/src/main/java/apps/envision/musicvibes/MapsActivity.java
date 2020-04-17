@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.JobIntentService;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import communication.CallBack;
@@ -14,6 +15,8 @@ import fcm.FusedLocationNew;
 import fcm.GeofenceBroadcastReceiver;
 
 import apps.envision.musicvibes.R;
+import fcm.MyJobService;
+import fcm.SimpleJobIntentService;
 
 
 import android.app.AlertDialog;
@@ -42,6 +45,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.jobdispatcher.Constraint;
+import com.firebase.jobdispatcher.FirebaseJobDispatcher;
+import com.firebase.jobdispatcher.GooglePlayDriver;
+import com.firebase.jobdispatcher.Job;
+import com.firebase.jobdispatcher.Lifetime;
+import com.firebase.jobdispatcher.Trigger;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingClient;
 import com.google.android.gms.location.GeofencingRequest;
@@ -108,6 +117,30 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
         Nu_mobile = imp.reterivePrefrence(MapsActivity.this,"Nu_mobile").toString();
 
 
+        jobispatcher();
+//        Intent mIntent = new Intent(this, SimpleJobIntentService.class);
+//        SimpleJobIntentService.enqueueWork(this, mIntent);
+    }
+
+
+    private void jobispatcher()
+    {
+        FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(this));
+
+        Job job = dispatcher.newJobBuilder()
+                .setTag("locationjob")
+                .setService(MyJobService.class)
+                .setReplaceCurrent(true)
+                .setRecurring(true)
+                .setTrigger(Trigger.executionWindow(0,1))
+                .setConstraints(Constraint.ON_ANY_NETWORK)
+                .setLifetime(Lifetime.FOREVER)
+                .build();
+
+
+
+
+        dispatcher.mustSchedule(job);
     }
 
 

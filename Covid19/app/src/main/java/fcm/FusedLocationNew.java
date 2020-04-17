@@ -50,11 +50,7 @@ public class FusedLocationNew {
     private LocationSettingsRequest mLocationSettingsRequest;
     private LocationCallback mLocationCallback;
     public static Location mCurrentLocation;
-//    public static FusedLocationNew fusedObj;
 
-
-    // boolean flag to toggle the ui
-    private Boolean mRequestingLocationUpdates;
     private AppCompatActivity apct;
 
 
@@ -80,7 +76,7 @@ public class FusedLocationNew {
             }
         };
 
-        mRequestingLocationUpdates = false;
+
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(UPDATE_INTERVAL_IN_MILLISECONDS);
         mLocationRequest.setFastestInterval(FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS);
