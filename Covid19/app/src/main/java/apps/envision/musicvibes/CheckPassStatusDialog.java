@@ -1,13 +1,24 @@
 package apps.envision.musicvibes;
 
 import android.app.Dialog;
+import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class CheckPassStatusDialog
@@ -16,7 +27,7 @@ public class CheckPassStatusDialog
 
     private Dialog appUpdatedDialog;
 
-        public CheckPassStatusDialog(final MapsActivity appCompatActivity) {
+        public CheckPassStatusDialog(final AppCompatActivity appCompatActivity,String mobile,String id,String passStatus) {
             if(appUpdatedDialog != null && appUpdatedDialog.isShowing()) {
                 appUpdatedDialog.dismiss();
             }
@@ -33,6 +44,15 @@ public class CheckPassStatusDialog
             appUpdatedDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
             appUpdatedDialog.show();
 
+            if(passStatus.equalsIgnoreCase("Approved"))
+            {
+                generateQrCode(mobile,id,(ImageView) appUpdatedDialog.findViewById(R.id.qrcode));
+            }
+            else
+            {
+                appUpdatedDialog.findViewById(R.id.ll_isShowQr).setVisibility(View.GONE);
+            }
+
 
             final LinearLayout ll_innercheckpassstatus =appUpdatedDialog.findViewById(R.id.ll_innercheckpassstatus);
 
@@ -41,35 +61,38 @@ public class CheckPassStatusDialog
             animation.setFillAfter(true);
             ll_innercheckpassstatus.startAnimation(animation);
 
-            appUpdatedDialog.findViewById(R.id.ll_activecasesouter).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            TextView passStatusedt =appUpdatedDialog.findViewById(R.id.checkpassstatus);
 
-                    Animation animation = new TranslateAnimation(00, 1000,000, -1000);
-                    animation.setDuration(500);
-                    animation.setFillAfter(true);
-                    ll_innercheckpassstatus.startAnimation(animation);
-
-                    animation.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationEnd(Animation animation) {
-                            appUpdatedDialog.dismiss();
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(Animation animation) {
-
-                        }
-                    });
-
-
-                }
-            });
+            passStatusedt.setText(passStatus);
+//            appUpdatedDialog.findViewById(R.id.ll_activecasesouter).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    Animation animation = new TranslateAnimation(00, 1000,000, -1000);
+//                    animation.setDuration(500);
+//                    animation.setFillAfter(true);
+//                    ll_innercheckpassstatus.startAnimation(animation);
+//
+//                    animation.setAnimationListener(new Animation.AnimationListener() {
+//                        @Override
+//                        public void onAnimationStart(Animation animation) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onAnimationEnd(Animation animation) {
+//                            appUpdatedDialog.dismiss();
+//                        }
+//
+//                        @Override
+//                        public void onAnimationRepeat(Animation animation) {
+//
+//                        }
+//                    });
+//
+//
+//                }
+//            });
 
             appUpdatedDialog.findViewById(R.id.verify).setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -99,28 +122,20 @@ public class CheckPassStatusDialog
 
                 }
             });
+        }
 
-
-
-
-//            Map<String, String> m = new HashMap<>();
-//            new ServerHandler().sendToServer(appCompatActivity, "stats", m, 0, new CallBack() {
-//                @Override
-//                public void getRespone(String dta, ArrayList<Object> respons) {
-//
-//                    try {
-//                        JSONObject data = new JSONObject(dta);
-//                        System.out.println("data=-=" + data);
-//                        if (data.getString("status").equalsIgnoreCase("true"))
-//                        {
-//
-//
-//                        }
-//                    } catch (Exception e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            });
+        private void generateQrCode(String mobile, String passid, ImageView imageView)
+        {
+            String text=mobile+"-"+passid;
+            MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
+            try {
+                BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.QR_CODE,250,250);
+                BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
+                Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
+                imageView.setImageBitmap(bitmap);
+            } catch (WriterException e) {
+                e.printStackTrace();
+            }
         }
     }
 

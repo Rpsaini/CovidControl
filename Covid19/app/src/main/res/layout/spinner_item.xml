@@ -5,4 +5,4 @@
     android:paddingTop="10dp"
     style="@style/textsize16"
     android:paddingLeft="2dp"
-    android:textColor="#ffff" />
+    android:textColor="@color/colorPrimary" />

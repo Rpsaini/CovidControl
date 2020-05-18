@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    >
+
+    <LinearLayout
+        android:background="@color/edittextcolor"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:id="@+id/creditum_icon"
+        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        >
+        <ImageView
+            android:layout_weight=".2"
+            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/covidhome"
+            android:layout_marginTop="10dp"
+            ></ImageView>
+
+        <fonts.RobotoRegularTextView
+            android:layout_weight=".5"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="left|center"
+            android:textColor="@color/textcolorsolor"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="@string/helpandneed"
+            android:textSize="20dp"
+
+            ></fonts.RobotoRegularTextView>
+
+        <TextView
+
+            android:layout_weight=".3"
+            android:id="@+id/checkorderstatus"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="40dp"
+
+            android:background="@drawable/round_button_drawable"
+            android:text="Check status"
+            android:textSize="14dp"
+            android:textColor="@color/white_color"
+            ></TextView>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        >
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            >
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:background="@drawable/edittext_drawble"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        >
+                        <Spinner
+
+                            android:id="@+id/spinner_service"
+                            style="@style/textsize16"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="center|left"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/white_color"
+                            android:textColorHint="#f4f4f4"
+                            ></Spinner>
+
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="3dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0dp"
+                            android:background="@color/buttonborder"></View>
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_height="20dp"
+                            android:layout_width="20dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/uparrow"
+                            android:layout_alignParentEnd="true"
+                            android:tint="@color/white_color"
+                            android:padding="5dp"
+                            android:rotation="180"
+                            ></ImageView>
+                    </RelativeLayout>
+
+
+
+
+
+
+                    <RelativeLayout
+                        android:background="@drawable/edittext_drawble"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        >
+                        <EditText
+                            android:inputType="textMultiLine"
+                            android:textCursorDrawable="@drawable/cursordrawable"
+                            android:id="@+id/service_comment"
+                            style="@style/textsize16"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@android:color/transparent"
+                            android:gravity="left|top"
+                            android:padding="16dp"
+                            android:hint="Remarks"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textColorHint="@color/colorPrimary"
+                            ></EditText>
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="3dp"
+                            android:background="@color/buttonborder"
+                            android:layout_alignParentBottom="true"
+                            ></View>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="100dp"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:tag="0"
+                            android:id="@+id/serviceimage"
+                            android:scaleType="fitXY"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/upload_image"
+                            ></ImageView>
+
+                        <fonts.RobotoRegularTextView
+                            android:gravity="center|left"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Atach image"
+                            style="@style/textsize16"
+                            android:textColor="@color/textcolorsolor"
+                            ></fonts.RobotoRegularTextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            <TextView
+
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/done"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white_color"
+                android:background="@drawable/round_button_drawable"
+                android:gravity="center"
+                android:text="Submit"
+                ></TextView>
+
+        </LinearLayout>>
+    </ScrollView>
+</LinearLayout>

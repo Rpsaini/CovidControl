@@ -3,18 +3,17 @@ package fcm;
 import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import com.firebase.jobdispatcher.JobParameters;
 import com.firebase.jobdispatcher.JobService;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+import apps.envision.musicvibes.SplashScreen;
+
 
 public class MyJobService extends JobService
 {
@@ -50,7 +49,7 @@ public class MyJobService extends JobService
                     }
                 };
                 mBackgroundTask.execute();
-                hnd.postDelayed(this,30000);
+                hnd.postDelayed(this,60000);
             }
         };
         hnd.postDelayed(runnable,100);
@@ -61,6 +60,8 @@ public class MyJobService extends JobService
     public boolean onStopJob(JobParameters job) {
         return false; // Answers the question: "Should this job be retried?"
     }
+
+
 
 
 }

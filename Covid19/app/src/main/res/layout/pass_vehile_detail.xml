@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Fill E-pass detail"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
+            android:textColor="@color/textcolorsolor"
             ></TextView>
 
 
@@ -33,7 +33,7 @@
             >
             <Spinner
 
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_vehicletype"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                 android:gravity="center|left"
                  android:hint="Vehicle number"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -126,7 +126,7 @@
                 android:gravity="center|left"
                 android:hint="Date"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></TextView>
 
@@ -165,7 +165,7 @@
                 android:padding="5dp"
                 android:hint="Reason for going out"
                 android:maxLines="5"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -196,7 +196,7 @@
                 android:layout_gravity="center"
                 android:layout_height="30dp"
                 android:layout_width="30dp"
-                android:buttonTint="@color/white_color"
+                android:buttonTint="@color/textcolorsolor"
                 ></CheckBox>
 
             <TextView
@@ -207,7 +207,7 @@
                 android:text="@string/termsandcondition"
                 style="@style/textsize14"
                 android:inputType="textMultiLine"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 ></TextView>
 
 

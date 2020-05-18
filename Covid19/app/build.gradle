@@ -7,18 +7,19 @@ android {
         applicationId "apps.envision.musicvibes"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 11
+        versionName "11.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes
             {
-                release {
+                release
+                        {
                     minifyEnabled false
                     proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-                }
+                        }
             }
-}
+            }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -26,6 +27,8 @@ dependencies {
 //    implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     testImplementation 'junit:junit:4.12'
 //    implementation 'com.google.android.material:material:1.0.0'
 //    implementation 'com.google.android.material:material:1.1.0-alpha07'
@@ -48,9 +51,13 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:0.5+'
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.android.support:multidex:1.0.1'
+    implementation "com.squareup.picasso:picasso:2.5.2"
 //    implementation 'uk.co.chrisjenx:calligraphy:2.2.0'
 
     implementation 'com.firebase:firebase-jobdispatcher:0.8.6'
+
+    implementation 'com.google.zxing:core:3.2.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
 }
 
 apply plugin: 'com.google.gms.google-services'

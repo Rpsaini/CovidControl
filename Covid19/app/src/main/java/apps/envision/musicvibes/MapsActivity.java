@@ -81,7 +81,7 @@ import java.util.Set;
 public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
     private GeofencingClient geofencingClient;
     List<Geofence> geofenceList=new ArrayList<>();
-    public static boolean isSelfieUploaded=false;
+//    public static boolean isSelfieUploaded=false;
     private  TextView upload_register;
     private static final long GEOFENCE_EXPIRATION_TIME =1800000;//mill
     private Map<String,String> blueToothMap=new HashMap<>();
@@ -109,7 +109,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
         isDownloading=isDownloading(MapsActivity.this);
 
         init();
-        if(!isDownloading) {
+        if(!isDownloading)
+        {
             new ActiveCasesDialog(this);
             }
         SaveImpPrefrences imp=new SaveImpPrefrences();
@@ -205,7 +206,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
             public void onClick(View v) {
 
 
-                new ShowOptionDialog(MapsActivity.this,Nu_mobile,isQuarantine);
+               // new ShowOptionDialog(MapsActivity.this,Nu_mobile,isQuarantine);
             }
         });
     }
@@ -328,10 +329,10 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
                                         {
                                             if(!isDownloading)
                                             {
-                                                //Integer.parseInt(obj.getString("appversion")
-                                                if (getVersionCode(MapsActivity.this) < 2)
+
+                                                if(getVersionCode(MapsActivity.this) < Integer.parseInt(obj.getString("appversion")))
                                                 {
-                                                   // alertDialogForUpdate();
+                                                    alertDialogForUpdate(obj.getString("url"));
                                                 }
                                             }
 
@@ -532,11 +533,11 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
     @Override
     protected void onResume() {
         super.onResume();
-        if(MapsActivity.isSelfieUploaded)
-        {
-            MapsActivity.isSelfieUploaded=false;
-            getMapData();
-        }
+//        if(MapsActivity.isSelfieUploaded)
+//        {
+//            MapsActivity.isSelfieUploaded=false;
+//            getMapData();
+//        }
 
         String isQuarantine=new SaveImpPrefrences().reterivePrefrence(MapsActivity.this,"isQuarantine").toString();
         if(isQuarantine.equalsIgnoreCase("yes"))

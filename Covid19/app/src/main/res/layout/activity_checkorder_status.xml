@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    tools:context=".CheckorderStatusActivity">
+    <LinearLayout
+        android:background="@color/edittextcolor"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:id="@+id/creditum_icon"
+        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        >
+        <ImageView
+            android:layout_weight=".2"
+            android:layout_marginLeft="30dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:src="@drawable/covidhome"
+            android:layout_marginTop="10dp"
+            ></ImageView>
+
+        <TextView
+            android:layout_weight=".5"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="left|center"
+            android:textColor="@color/textcolorsolor"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="@string/helpandneed"
+            android:textSize="20dp"
+            ></TextView>
+
+        <TextView
+            android:layout_marginRight="5dp"
+            android:background="@drawable/round_button_drawable"
+            android:id="@+id/loadmore"
+            android:layout_weight=".3"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/white_color"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="View More"
+            android:textSize="14dp"
+            ></TextView>
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/helpandneed_recycler"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</LinearLayout>

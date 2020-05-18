@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:background="#f4f4f4"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="5dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:src="@mipmap/ic_launcher"
+             />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+
+            <fonts.RobotoRegularTextView
+                android:id="@+id/servicename"
+                android:textStyle="bold"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Service Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"></fonts.RobotoRegularTextView>
+
+
+
+            <fonts.RobotoRegularTextView
+                android:id="@+id/status"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Status"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"></fonts.RobotoRegularTextView>
+
+
+            <fonts.RobotoRegularTextView
+                android:id="@+id/remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Remarks"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17dp"></fonts.RobotoRegularTextView>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+
+
+
+
+<LinearLayout
+    android:id="@+id/ll_receivedlinear"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    >
+
+    <fonts.RobotoRegularTextView
+        android:id="@+id/cancel"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Not Received"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="@color/white_color"
+        android:background="@drawable/round_button_drawable"
+        ></fonts.RobotoRegularTextView>
+
+
+    <fonts.RobotoRegularTextView
+        android:id="@+id/approve"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Received"
+        android:gravity="center"
+         android:textSize="14dp"
+        android:textColor="@color/white_color"
+        android:background="@drawable/round_button_drawable"
+        ></fonts.RobotoRegularTextView>
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

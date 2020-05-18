@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
 
-        <TextView
+        <fonts.RobotoRegularTextView
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
@@ -19,8 +19,8 @@
             android:layout_height="wrap_content"
             android:text="Fill E-pass detail"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
-            ></TextView>
+            android:textColor="@color/textcolorsolor"
+            ></fonts.RobotoRegularTextView>
 
 
         <RelativeLayout
@@ -32,7 +32,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_state"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -78,7 +78,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_district"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -123,7 +123,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_passtype"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -168,7 +168,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/sppinner_category"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -214,7 +214,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_sub_category"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -254,7 +254,7 @@
 
 
 
-        <TextView
+        <fonts.RobotoRegularTextView
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
@@ -262,8 +262,8 @@
             android:layout_height="wrap_content"
             android:text="Address Detail"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
-            ></TextView>
+            android:textColor="@color/textcolorsolor"
+            ></fonts.RobotoRegularTextView>
 
         <RelativeLayout
             android:background="@drawable/edittext_drawble"
@@ -286,7 +286,7 @@
                 android:hint="Address"
 
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -319,7 +319,7 @@
                 android:gravity="center|left"
                 android:hint="Name"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -353,7 +353,7 @@
                 android:hint="Email"
 
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -392,7 +392,7 @@
                 android:maxLength="10"
                 android:paddingLeft="5dp"
                 android:inputType="number"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -428,7 +428,7 @@
                 android:gravity="center|left"
                 android:hint="From palace"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -462,7 +462,7 @@
                 android:gravity="center|left"
                 android:hint="To Place"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></EditText>
 
@@ -487,7 +487,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_nationality"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -497,7 +497,7 @@
                 android:background="@android:color/transparent"
                 android:gravity="center|left"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></Spinner>
 
@@ -535,7 +535,7 @@
             android:layout_height="60dp"
             >
             <Spinner
-                android:popupBackground="@color/edittextcolor"
+                android:popupBackground="#f4f4f4"
                 android:id="@+id/spinner_documenttype"
                 style="@style/textsize16"
                 android:layout_width="match_parent"
@@ -545,7 +545,7 @@
                 android:background="@android:color/transparent"
                 android:gravity="center|left"
                 android:paddingLeft="5dp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/hinttextcolor"
                 ></Spinner>
 

@@ -57,7 +57,7 @@ public class Upload {
             conn.setRequestProperty("Connection", "Keep-Alive");
             conn.setRequestProperty("ENCTYPE", "multipart/form-data");
             conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
-            conn.setRequestProperty(foldername+"", fileName + "?" + imageType + "?" + mobile+"?"+lat+"?"+lng);
+            conn.setRequestProperty(foldername+"", fileName + "?" + imageType);
 
 
             System.out.println("fil name==="+fileName+"=="+imageType+"==="+mobile+"=="+lat+"=="+lng);

@@ -27,6 +27,7 @@ public class VerifyOtpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_otp);
+        getSupportActionBar().hide();
         resendotp = findViewById(R.id.resendotp);
         resendotp.setVisibility(View.GONE);
         final EditText inputcode = findViewById(R.id.inputcode);
@@ -95,12 +96,10 @@ public class VerifyOtpActivity extends AppCompatActivity {
 
                         } else
                             {
-
-
                                 new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, obj.getString("is_qurantined"), "isQuarantine");
                                 new SaveImpPrefrences().savePrefrencesData(VerifyOtpActivity.this, getIntent().getStringExtra("mobile"), "Nu_mobile");
 
-                                Intent i = new Intent(VerifyOtpActivity.this, MapsActivity.class);
+                                Intent i = new Intent(VerifyOtpActivity.this, MainActivityNew.class);
                                 startActivity(i);
                                 finishAffinity ();
 

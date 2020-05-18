@@ -4,10 +4,10 @@
 
     <item>
         <shape>
-            <solid android:color="@color/edittextcolor"></solid>
+            <solid android:color="@android:color/transparent"></solid>
             <stroke
                 android:width="0.5dp"
-                android:color="@color/edittextcolor" />
+                android:color="@color/textcolorsolor" />
             <corners
                 android:topLeftRadius="8dp"
                 android:topRightRadius="8dp"

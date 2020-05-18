@@ -3,8 +3,9 @@
     android:id="@+id/outerlinearlayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:background="@drawable/white_drawable_with_upper_round"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="#f4f4f4"
     android:orientation="vertical">
 
 
@@ -15,7 +16,7 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <TextView
+        <fonts.RobotoRegularTextView
             android:id="@+id/logoutMaintitle"
             android:layout_width="match_parent"
             android:padding="7dp"
@@ -23,9 +24,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Logout"
-            android:textColor="@color/white_color"
+            android:textColor="@color/colorPrimary"
             android:textSize="17dp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold"></fonts.RobotoRegularTextView>
 
 
         <View
@@ -35,7 +36,7 @@
             android:background="@color/white_color"></View>
 
 
-        <TextView
+        <fonts.RobotoRegularTextView
 
             android:padding="10dp"
             android:textSize="17dp"
@@ -44,7 +45,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Are you sure you want to logout?"
-            android:textColor="@color/white_color"></TextView>
+            android:textColor="@color/colorPrimary"></fonts.RobotoRegularTextView>
 
 
         <LinearLayout

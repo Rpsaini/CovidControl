@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:id="@+id/ll_activecasesouter"
-    android:background="@android:color/transparent"
+    android:background="@color/white_color"
     android:layout_height="match_parent">
 
 
@@ -31,7 +31,7 @@
                     android:layout_marginTop="50dp"
                     ></ImageView>
 
-                <TextView
+                <fonts.RobotoRegularTextView
                     android:layout_marginTop="50dp"
                     android:paddingLeft="10dp"
                     android:gravity="left|center"
@@ -41,7 +41,7 @@
                     android:text="@string/app_name"
                     android:textSize="20dp"
 
-                    ></TextView>
+                    ></fonts.RobotoRegularTextView>
             </LinearLayout>
 
 
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <TextView
+                <fonts.RobotoRegularTextView
                     android:id="@+id/login_text"
                     android:layout_below="@+id/creditum_icon"
                     android:paddingLeft="35dp"
@@ -69,33 +69,33 @@
                     android:text="Current Pass Status"
                     style="@style/textsize16"
                     android:inputType="textMultiLine"
-                    ></TextView>
+                    ></fonts.RobotoRegularTextView>
 
 
                 <RelativeLayout
                     android:background="@drawable/corner_round"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     >
 
 
-                    <TextView
-                        android:id="@+id/mobilenumber_text"
+                    <fonts.RobotoRegularTextView
+                        android:id="@+id/checkpassstatus"
                         android:textSize="20dp"
                         android:layout_width="322dp"
                         android:layout_height="match_parent"
                         android:layout_centerHorizontal="true"
                         android:layout_marginLeft="40dp"
-                        android:background="@android:color/transparent"
+
                         android:gravity="center"
-                        android:text="In Process"
+                        android:text=""
                         android:paddingLeft="10dp"
                         android:textColor="@color/colorPrimary"
 
-                        ></TextView>
+                        ></fonts.RobotoRegularTextView>
 
 
 
@@ -131,11 +131,11 @@
 
 
 
-                    <TextView
+                    <fonts.RobotoRegularTextView
                         android:id="@+id/verify"
-                        android:layout_marginBottom="50dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="200dp"
                         android:layout_gravity="center"
                         android:background="@drawable/round_button_drawable"
                         android:layout_marginLeft="50dp"
@@ -149,20 +149,45 @@
                         android:gravity="center"
                         android:textColor="@color/white_color"
                         style="@style/textsize22"
-                        ></TextView>
-
-
-
+                        ></fonts.RobotoRegularTextView>
 
                 </LinearLayout>
 
 
 
-
             </LinearLayout>
+
+
         </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/ll_isShowQr"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+    <fonts.RobotoRegularTextView
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="17dp"
+        android:textColor="@color/black_color"
+        android:text="Citizens need to show these QR Codes at various checkpoints."
+        ></fonts.RobotoRegularTextView>
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/qrcode"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        ></ImageView>
+    </LinearLayout>
 
 
 </RelativeLayout>

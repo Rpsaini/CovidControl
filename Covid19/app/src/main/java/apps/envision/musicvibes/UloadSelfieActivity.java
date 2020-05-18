@@ -64,10 +64,11 @@ public class UloadSelfieActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uload_selfie);
+        getSupportActionBar().hide();
 
         mobileNumber = getIntent().getStringExtra("mobile");
 
-        MapsActivity.isSelfieUploaded = false;
+        MainActivityNew.isSelfieUploaded = false;
 
 
         profileimage = findViewById(R.id.selfie);
@@ -492,7 +493,7 @@ public class UloadSelfieActivity extends AppCompatActivity {
                                     // showImage.setTag("1");
                                     //  imgcallbac.getImagename(obj.getString("data"));
                                     Toast.makeText(UloadSelfieActivity.this, obj.getString("message"), Toast.LENGTH_LONG).show();
-                                    MapsActivity.isSelfieUploaded = true;
+                                    MainActivityNew.isSelfieUploaded = true;
                                     finish();
                                 } else {
 

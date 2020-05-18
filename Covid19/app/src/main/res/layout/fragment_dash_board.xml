@@ -1,0 +1,771 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fragments.DashBoardFragment">
+
+
+
+
+    <ScrollView
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:background="@color/white_color"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    >
+
+                    <fonts.RobotoBoldTextView
+                        android:id="@+id/stateTextView"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text=" Real Time Corona Stats"
+                        android:textColor="@color/translucent_black"
+                        android:textSize="17dp"
+                        android:maxLines="2"
+                        android:layout_alignParentRight="true"
+                        ></fonts.RobotoBoldTextView>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_state_tested"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize24"
+                            ></fonts.RobotoRegularTextView>
+                        <fonts.RobotoRegularTextView
+                            style="@style/textsize13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Tested"
+                            android:textColor="@color/colorPrimary"></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_state_negative"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize24"
+                            ></fonts.RobotoRegularTextView>
+                        <fonts.RobotoRegularTextView
+                            style="@style/textsize13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Nagative"
+                            android:textColor="@color/colorPrimary"></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--//stats data-->
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_confirmed"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Confirmed"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/confirm_cases_image"
+                        ></ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_recovered"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Recovered"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/recovered_image"
+                        ></ImageView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <!--        secnd-->
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_active"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Active Cases"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".3"
+                        android:src="@drawable/active_cases_image"></ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_death"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Deaths"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/death_cases_image"
+                        ></ImageView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--    //thrid-->
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_homequarantine"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Home Quarantine"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/home_quarantine_image"
+                        ></ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_hospitalquarantine"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hosp. Quarantine"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/hospital_quarantine_image"
+                        ></ImageView>
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                />
+
+            <fonts.RobotoBoldTextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="India Real Time Counter"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/translucent_black"
+                style="@style/textsize13"
+                android:textStyle="bold"
+                ></fonts.RobotoBoldTextView>
+
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_confiremd_india"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Confirmed Cases"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/confirm_cases_image"
+                        ></ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_total_death_india"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Deaths"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/death_cases_image"
+                        ></ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <!--    workd-->
+
+            <fonts.RobotoBoldTextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="World Real Time Counter"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/translucent_black"
+                style="@style/textsize13"
+                android:textStyle="bold"
+                ></fonts.RobotoBoldTextView>
+
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_confiremd_world"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Confirmed Cases"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/confirm_cases_image"
+                        ></ImageView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/corner_round"
+                    android:layout_height="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:orientation="vertical"
+                        >
+
+                        <fonts.RobotoRegularTextView
+                            android:id="@+id/crona_total_death_world"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize20"
+                            ></fonts.RobotoRegularTextView>
+
+                        <fonts.RobotoRegularTextView
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Deaths"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            style="@style/textsize13"
+                            ></fonts.RobotoRegularTextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/death_cases_image"
+                        ></ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

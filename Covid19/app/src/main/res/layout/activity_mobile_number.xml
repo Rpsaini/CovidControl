@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/white_color"
     android:layout_height="match_parent">
 
 
@@ -37,7 +37,7 @@
                     android:layout_marginTop="50dp"
                     android:paddingLeft="10dp"
                     android:gravity="left|center"
-                    android:textColor="@color/white_color"
+                    android:textColor="@color/textcolorsolor"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:text="@string/app_name"
@@ -64,7 +64,7 @@
                     android:layout_below="@+id/creditum_icon"
                     android:paddingLeft="30dp"
                     android:layout_gravity="bottom"
-                    android:textColor="@color/white_color"
+                    android:textColor="@color/textcolorsolor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="30dp"
@@ -97,8 +97,8 @@
                         android:inputType="number"
                         android:maxLength="10"
                         android:paddingLeft="10dp"
-                        android:textColor="@color/white_color"
-                        android:textColorHint="@color/hinttextcolor"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
                         ></TextView>
 
                     <ImageView
@@ -134,7 +134,7 @@
                         android:padding="15dp"
                         android:layout_alignParentEnd="true"
                         android:src="@drawable/uparrow"
-                        android:tint="@color/white_color"
+                        android:tint="@color/colorPrimary"
                         android:rotation="-90"
                         ></ImageView>
                 </RelativeLayout>
@@ -179,13 +179,13 @@
                             android:textStyle="bold"
                             style="@style/textsize24"
                             android:gravity="center"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:textColor="@color/white_color"
                             ></TextView>
 
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/two"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -198,7 +198,7 @@
 
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/three"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -221,7 +221,7 @@
                         >
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/four"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -234,7 +234,7 @@
 
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/five"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -247,7 +247,7 @@
 
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/six"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -269,7 +269,7 @@
                         >
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/seven"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -282,7 +282,7 @@
 
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/eight"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -295,7 +295,7 @@
 
                         <TextView
                             android:layout_margin="1dp"
-                            android:background="@color/edittextcolor"
+                            android:background="@color/textcolorsolor"
                             android:id="@+id/nine"
                             android:layout_height="match_parent"
                             android:layout_width="100dp"
@@ -311,7 +311,7 @@
 
                     <TextView
                         android:layout_margin="1dp"
-                        android:background="@color/edittextcolor"
+                        android:background="@color/textcolorsolor"
                         android:id="@+id/zero"
                         android:layout_height="60dp"
                         android:layout_width="100dp"

@@ -1,0 +1,258 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    tools:context="fragments.CheckUpFragment">
+
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+    <fonts.RobotoRegularTextView
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Symptoms"
+        android:textSize="25dp"
+        >
+    </fonts.RobotoRegularTextView>
+
+        <fonts.RobotoRegularTextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Covid-19 diseases"
+            android:textColor="@color/red_color"
+            android:textSize="15dp"
+            >
+        </fonts.RobotoRegularTextView>
+
+        <fonts.RobotoRegularTextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="People may be sick with the vuirus for 1 to 14 days before developing any symptoms"
+            android:textColor="@color/translucent_black"
+            android:textSize="15dp"
+            >
+        </fonts.RobotoRegularTextView>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/symptoms_illustration"
+            android:layout_marginTop="20dp"
+            ></ImageView>
+
+
+        <fonts.RobotoRegularTextView
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What Symptoms do you experience ?"
+            android:textSize="25dp"
+            >
+        </fonts.RobotoRegularTextView>
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            >
+
+            <fonts.RobotoRegularTextView
+                android:alpha=".5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/symptomsdrawable"
+                android:text="Fever"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                ></fonts.RobotoRegularTextView>
+
+            <fonts.RobotoRegularTextView
+                android:layout_marginLeft="10dp"
+                android:alpha=".5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:background="@drawable/symptomsdrawable"
+                android:text="Runny nose"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                ></fonts.RobotoRegularTextView>
+
+
+            <fonts.RobotoRegularTextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/symptomsdrawable"
+                android:text="Cough"
+                android:gravity="center"
+                android:textColor="@color/white_color"
+                ></fonts.RobotoRegularTextView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+
+
+
+            <fonts.RobotoRegularTextView
+                android:alpha=".5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:background="@drawable/symptomsdrawable"
+                android:text="Sore throat"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                ></fonts.RobotoRegularTextView>
+
+
+            <fonts.RobotoRegularTextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:background="@drawable/symptomsdrawable"
+                android:text="Breathing problem"
+                android:gravity="center"
+                android:textColor="@color/white_color"
+                ></fonts.RobotoRegularTextView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        >
+
+        <fonts.RobotoRegularTextView
+            android:alpha=".5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".9"
+            android:background="@drawable/symptomsdrawable"
+            android:text="Headache"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            ></fonts.RobotoRegularTextView>
+
+        <fonts.RobotoRegularTextView
+            android:layout_marginLeft="10dp"
+            android:alpha=".5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:background="@drawable/symptomsdrawable"
+            android:text="Fatique"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            ></fonts.RobotoRegularTextView>
+
+
+        <fonts.RobotoRegularTextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:background="@drawable/symptomsdrawable"
+            android:text="Dyspnoea"
+            android:gravity="center"
+            android:textColor="@color/white_color"
+            ></fonts.RobotoRegularTextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+
+
+
+        <fonts.RobotoRegularTextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/redcolor_button"
+            android:text="ASSESS NOW"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white_color"
+            ></fonts.RobotoRegularTextView>
+
+
+        <fonts.RobotoRegularTextView
+            android:id="@+id/live_chat"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/geeen_drawable"
+            android:text="Live Chat"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white_color"
+            ></fonts.RobotoRegularTextView>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/white_color"
     android:layout_marginRight="30dp"
     android:layout_marginLeft="30dp"
     android:layout_height="match_parent">
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Proof Images"
         style="@style/textsize16"
-        android:textColor="@color/white_color"
+        android:textColor="@color/textcolorsolor"
         ></TextView>
 
 
@@ -44,7 +44,7 @@
             android:layout_height="match_parent"
             android:text="Attach ID Proof front"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
+            android:textColor="@color/textcolorsolor"
             ></TextView>
 
     </LinearLayout>
@@ -74,7 +74,7 @@
             android:layout_height="match_parent"
             android:text="Attach ID Proof back"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
+            android:textColor="@color/textcolorsolor"
             ></TextView>
 
     </LinearLayout>
@@ -103,7 +103,7 @@
             android:layout_height="match_parent"
             android:text="Supporting document"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
+            android:textColor="@color/textcolorsolor"
             ></TextView>
 
     </LinearLayout>
@@ -133,7 +133,7 @@
             android:layout_height="match_parent"
             android:text="Upload your photo"
             style="@style/textsize16"
-            android:textColor="@color/white_color"
+            android:textColor="@color/textcolorsolor"
             ></TextView>
 
     </LinearLayout>

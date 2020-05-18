@@ -24,6 +24,7 @@ public class MobileNumberActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mobile_number);
+        getSupportActionBar().hide();
         ArrayList<TextView> keyBoardArray=new ArrayList<>();
         keyBoardArray.add((TextView)findViewById(R.id.one));
         keyBoardArray.add((TextView)findViewById(R.id.two));

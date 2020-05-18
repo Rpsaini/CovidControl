@@ -10,6 +10,7 @@ import fcm.StayAlwayNotification;
 import apps.envision.musicvibes.R;
 
 
+import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -25,6 +26,7 @@ import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import java.util.List;
 import java.util.Random;
 
 public class SplashScreen extends AppCompatActivity {
@@ -41,6 +43,23 @@ public class SplashScreen extends AppCompatActivity {
         imp = new SaveImpPrefrences();
         new StayAlwayNotification(this);
 
+        try {
+
+
+            final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+            final List<ActivityManager.RunningTaskInfo> recentTasks = activityManager.getRunningTasks(Integer.MAX_VALUE);
+
+            for (int i = 0; i < recentTasks.size(); i++)
+            {
+
+                System.out.println("executed apps==="+recentTasks.get(i).id);
+
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
 //    public native String stringFromJNI();
@@ -75,7 +94,7 @@ public class SplashScreen extends AppCompatActivity {
                         }
                         else
                         {
-                            Intent i = new Intent(SplashScreen.this, MapsActivity.class);
+                            Intent i = new Intent(SplashScreen.this, MainActivityNew.class);
                             startActivity(i);
 
                         }
@@ -125,7 +144,7 @@ public class SplashScreen extends AppCompatActivity {
                         {
                         counter = 20;
                         if (deviceToken.equalsIgnoreCase("") || deviceToken.equalsIgnoreCase("0")) {
-                            imp.savePrefrencesData(SplashScreen.this, generateRandomString(), "device_token_user");
+                            imp.savePrefrencesData(SplashScreen.this, generateRandomString(), "device_token");
                         }
                         initiate();
                     }

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivityNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/edittextcolor"
+        >
+
+        <ImageView
+            android:visibility="gone"
+            android:padding="13dp"
+            android:id="@+id/dashboard"
+            android:src="@drawable/menu_icon"
+            android:rotation="180"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            ></ImageView>
+
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:id="@+id/creditum_icon"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+            <ImageView
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/covidhome"
+                ></ImageView>
+
+            <fonts.RobotoRegularTextView
+                android:paddingLeft="10dp"
+                android:gravity="left|center"
+                android:textColor="@color/white_color"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/app_name"
+                android:textSize="20dp"
+                ></fonts.RobotoRegularTextView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:padding="13dp"
+            android:tint="@color/white_color"
+            android:id="@+id/showoption"
+            android:src="@drawable/ic_more"
+            android:rotation="180"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+
+            ></ImageView>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_dashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+        <ImageView
+           android:layout_gravity="center"
+           android:layout_marginLeft="10dp"
+           android:layout_width="22dp"
+           android:layout_height="22dp"
+           android:src="@drawable/dashboard_icon"
+           ></ImageView>
+            <fonts.RobotoRegularTextView
+                android:paddingLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Dashboard"
+                android:textColor="@color/textcolorsolor"
+                android:textSize="14dp"
+                android:layout_alignParentRight="true"
+                ></fonts.RobotoRegularTextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_checkup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/checkup_icon"
+                ></ImageView>
+            <fonts.RobotoRegularTextView
+                android:paddingLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Check Up"
+                android:textColor="@color/textcolorsolor"
+                android:textSize="14dp"
+                android:layout_alignParentRight="true"
+                ></fonts.RobotoRegularTextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_protection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/protection_icon"
+                ></ImageView>
+            <fonts.RobotoRegularTextView
+                android:paddingLeft="5dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Protection"
+                android:textColor="@color/textcolorsolor"
+                android:textSize="14dp"
+                android:layout_alignParentRight="true"
+                ></fonts.RobotoRegularTextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+        <View
+
+            android:id="@+id/view_dashboard"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/textcolorsolor"
+            ></View>
+
+        <View
+            android:id="@+id/view_checkup"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/textcolorsolor"
+            ></View>
+
+        <View
+            android:id="@+id/view_protection"
+            android:visibility="invisible"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/textcolorsolor"
+            ></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/container"
+        ></LinearLayout>
+
+    </LinearLayout>
+        <fonts.RobotoBoldTextView
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/upload_selfie"
+
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:text="Upload Selfie"
+            android:background="#f4f4f4"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/textcolorsolor"
+            ></fonts.RobotoBoldTextView>
+
+       </RelativeLayout>

@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    tools:context="fragments.CheckUpFragment">
+
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+                <fonts.RobotoRegularTextView
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Protection"
+                    android:textSize="25dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+                <fonts.RobotoRegularTextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Covid-19 diseases"
+                    android:textColor="@color/red_color"
+                    android:textSize="15dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+                <fonts.RobotoRegularTextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="There`s Currently no vaccine to prevent this disease. You can protect yourself and help prevent spreading the virus if you: "
+                    android:textColor="@color/translucent_black"
+                    android:textSize="15dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/caugh_icon"
+                    android:layout_marginTop="20dp"
+                    ></ImageView>
+
+
+                <fonts.RobotoRegularTextView
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cover you caugh"
+                    android:textSize="25dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+                <fonts.RobotoRegularTextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cover your nose and mouth with disposable tissues"
+                    android:textColor="@color/translucent_black"
+                    android:textSize="15dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wash_hands_icon"
+                    android:layout_marginTop="20dp"
+                    ></ImageView>
+
+
+                <fonts.RobotoRegularTextView
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wash your hand"
+                    android:textSize="25dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+                <fonts.RobotoRegularTextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="With soap and water and alchol based hand rub."
+                    android:textColor="@color/translucent_black"
+                    android:textSize="15dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/distance_icon"
+                    android:layout_marginTop="20dp"
+                    ></ImageView>
+
+
+                <fonts.RobotoRegularTextView
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Social Distance"
+                    android:textSize="25dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+                <fonts.RobotoRegularTextView
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Maintain atleast 6 feet distance from each other on public places.Avoid gathering on public and private."
+                    android:textColor="@color/translucent_black"
+                    android:textSize="15dp"
+                    >
+                </fonts.RobotoRegularTextView>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

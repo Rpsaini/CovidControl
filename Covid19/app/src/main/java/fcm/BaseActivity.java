@@ -53,19 +53,21 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 
     public ProgressDialog mProgressDialog;
-
     protected  Context mContext;
-
     private AlertDialog downloadDialog;
     protected ProgressBar downloadProgressBar;
     protected TextView progressPercentage;
     private static final int EXTERNAL_STORAGE_PERMISSION_CONSTANT = 100;
 
-    long downloadID;
-    String filename="CovidControlR.apk";
-    String downloadfilename="CovidControlR.apk";
-    File file;
-    String installationath="application/vnd.android.package-archive";
+    private long downloadID;
+    private String filename="CovidControlR.apk";
+    private String downloadfilename="CovidControlR.apk";
+    private File file;
+    private String installationath="application/vnd.android.package-archive";
+    private String Apkurl="";
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -74,9 +76,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
         mContext = this;
         }
-
-
-    public  boolean isDownloading(Context context)
+        public  boolean isDownloading(Context context)
     {
         long dowloadedid=Long.parseLong(new SaveImpPrefrences().reterivePrefrence(BaseActivity.this,CConstant.key_downloadid)+"");
         System.out.println("downloaded is==="+dowloadedid);
@@ -123,8 +123,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 
 
-    public void alertDialogForUpdate()
+    public void alertDialogForUpdate(String url)
      {
+        Apkurl=url;
         AlertDialog.Builder alertDialogJoinBuilder = new AlertDialog.Builder(mContext);
         LayoutInflater inflater = getLayoutInflater();
         View convertView = inflater.inflate(R.layout.update, null);
@@ -197,8 +198,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         if(file.exists())
             file.delete();
 
+        System.out.println("apk ur;ll="+Apkurl+downloadfilename);
 
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(CConstant.Apkurl+downloadfilename))
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(Apkurl+downloadfilename))
                 .setTitle(getResources().getString(R.string.app_name))// Title of the Download Notification
                 .setDescription("Downloading")// Description of the Download Notification
                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)// Visibility of the download Notification

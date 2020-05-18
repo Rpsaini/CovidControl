@@ -27,9 +27,18 @@
     <color name="green_color">#0A5D00</color>
 
     <color name="translucent_black">#80000000</color>
-    <color name="edittextcolor">#252525</color>
-    <color name="buttonborder">#007BFF</color>
+    <color name="edittextcolor">#2B364F</color>
+    <color name="buttonborder">#5BCEA1</color>
     <color name="hinttextcolor">#BBBBBB</color>
+
+
+    <color name="textcolorsolor">#5BCEA1</color>
+    <color name="symtomscolor">#259AF4</color>
+
+
+
+
+
 
 
 

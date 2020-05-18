@@ -72,6 +72,7 @@ public class ApplyForPass extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apply_for_pass);
+        getSupportActionBar().hide();
         init();
     }
 
@@ -221,9 +222,6 @@ public class ApplyForPass extends AppCompatActivity {
         array_nationalityAr.add("Select Nationality Type");
         array_nationalityAr.add("Indian");
         array_nationalityAr.add("Foreigner");
-
-
-
 
         ArrayAdapter<String> spinnerDocument = new ArrayAdapter<String>
                 (this, R.layout.spinner_item,documentTypeAr);
@@ -450,8 +448,6 @@ public class ApplyForPass extends AppCompatActivity {
                     finalDataMap.put("date",pass_date.getText()+"");
                     finalDataMap.put("reason",pass_reason.getText()+"");
                     System.out.println("map data===="+finalDataMap);
-
-
 
                     new ServerHandler().sendToServer(ApplyForPass.this, "save_epass_data", finalDataMap, 0, new CallBack() {
                         @Override
@@ -741,7 +737,7 @@ public class ApplyForPass extends AppCompatActivity {
         @Override
         protected String doInBackground(Void... params) {
             Upload u = new Upload();
-            String msg = u.uploadVideo(path1, imageType, ApplyForPass.this, "9988525607", CConstant.baseUrl+"upload_epass_proof","epass_proof");
+            String msg = u.uploadVideo(path1, imageType, ApplyForPass.this, getIntent().getStringExtra("mobile"), CConstant.baseUrl+"upload_epass_proof","epass_proof");
 
             System.out.println("messga==============" + msg);
 

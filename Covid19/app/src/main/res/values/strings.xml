@@ -264,13 +264,16 @@ make sure that you are the right person.</string>
 </string>
 
 
-
     <string name="downloading">Downloading...</string>
     <string name="title_file_download">APK is downloading</string>
     <string name="storage_access_required">Storage access is required to downloading the file.</string>
     <string name="storage_permission_denied">Storage permission request was denied.</string>
     <string name="ok">OK</string>
     <string name="location_updated">Location Updated: %1$s</string>
+    <string name="helpandneed">Help &amp; Need</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--    <string-array name="array_passtype">-->
     <!--        <item>Select Pass Type</item>-->

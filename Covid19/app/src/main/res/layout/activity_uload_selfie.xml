@@ -4,37 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/white_color"
     android:orientation="vertical"
+
     >
 
 
     <LinearLayout
-
+        android:background="@color/edittextcolor"
         android:orientation="horizontal"
         android:id="@+id/creditum_icon"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_width="match_parent"
         >
         <ImageView
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="30dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/covidhome"
-            android:layout_marginTop="50dp"
+
             ></ImageView>
 
-        <TextView
-            android:layout_marginTop="50dp"
+        <fonts.RobotoRegularTextView
+            android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
             android:gravity="left|center"
-            android:textColor="@color/white_color"
+            android:textColor="@color/textcolorsolor"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="Upload your selfie"
             android:textSize="20dp"
 
-            ></TextView>
+            ></fonts.RobotoRegularTextView>
     </LinearLayout>
 
 
@@ -48,11 +50,12 @@
         android:orientation="vertical">
 
         <RelativeLayout
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
 
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:background="@drawable/image_selfie"
+            android:background="@drawable/edittext_drawble"
             >
             <ImageView
                 android:id="@+id/selfie"
@@ -78,7 +81,7 @@
 
 
 
-        <TextView
+        <fonts.RobotoRegularTextView
             android:id="@+id/verify"
             android:layout_marginBottom="50dp"
             android:layout_marginTop="10dp"
@@ -92,7 +95,7 @@
             android:gravity="center"
             android:textColor="@color/white_color"
             style="@style/textsize22"
-            ></TextView>
+            ></fonts.RobotoRegularTextView>
 
 
     </LinearLayout>
